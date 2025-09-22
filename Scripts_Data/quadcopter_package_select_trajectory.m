@@ -20,28 +20,14 @@ else
 end
 
 switch (path_number)
-    % case 1
-    %     waypoints = [ ...
-    %         -2    -2 0 2 5
-    %         -2    -2 0 0 0
-    %         0.14   6 6 6 0.14];
-    %     max_speed = 1;
-    %     min_speed = 0.1;
-    %     xApproach = [4 0.5];
-    %     vApproach = 0.1;
-
     case 1
         waypoints = [ ...
-            -2    -2    -2
-            -2    -2    -2
-            0.14   6    0.14];
+            -2    -2    -2   -2
+            -2    -2    -2   -2
+            0.14   6     6   0.14];
         spline_data = waypoints';
-        timespot_spl = [0; 10; 10+10; 10+10+10];
+        timespot_spl = [0; 12; 12+10; 12+10+12];
         spline_yaw = [0 0 0 0];
-        % max_speed = 1;
-        % min_speed = 0.1;
-        % xApproach = [4 0.5];
-        % vApproach = 0.1;
 
     case 2
         waypoints = [...
