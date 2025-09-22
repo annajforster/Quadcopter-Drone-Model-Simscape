@@ -32,12 +32,12 @@ switch (path_number)
 
     case 1
         waypoints = [ ...
-            -2    -2    -2
-            -2    -2    -2
-            0.14   6    0.14];
+            -2    -2  -2  -2   -2
+            -2    -2  -2  -2   -2
+            0.14   6   6   6   0.14];
         spline_data = waypoints';
-        timespot_spl = [0; 10; 10+10; 10+10+10];
-        spline_yaw = [0 0 0 0];
+        timespot_spl = [0 12 22 32 44]';
+        spline_yaw = [0 0 0 0 0];
         % max_speed = 1;
         % min_speed = 0.1;
         % xApproach = [4 0.5];
