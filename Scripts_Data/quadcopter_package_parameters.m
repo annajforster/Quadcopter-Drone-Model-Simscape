@@ -23,10 +23,6 @@ pkgGrndDamp   = 300;
 pkgGrndTransW = 1e-3;
 
 
-%% Package parameters
-pkgSize = [1 1 1]*0.14; % m
-pkgDensity = 1/(pkgSize(1)*pkgSize(2)*pkgSize(3)); % kg/m^3
-
 %% Propeller parameters
 propeller.diameter = 0.254; % m
 propeller.Kthrust  = 0.1072; 
