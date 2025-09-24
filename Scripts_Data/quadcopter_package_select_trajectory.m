@@ -32,26 +32,25 @@ switch (path_number)
 
     case 1
         waypoints = [ ...
-            -2    -2  -2  -2  -2   -2
-            -2    -2  -2  -2  -2   -2
-            0.14   6   6   6   6   0.14];
+            -2    -2  -2  -2  -2  -2  -2  -2   -2
+            -2    -2  -2  -2  -2  -2  -2  -2   -2
+            0.14   6   6   6   6   6   6   6   0.14];
         spline_data = waypoints';
-        timespot_spl = [0 12 18 24 32 44]';
-        spline_yaw = [0 0 0 0 0 0];
+        timespot_spl = [0 12 15 18 22 24 28 32 50]';
+        spline_yaw = [0 0 0 0 0 0 0 0 0];
         % max_speed = 1;
         % min_speed = 0.1;
         % xApproach = [4 0.5];
         % vApproach = 0.1;
 
     case 2
-        waypoints = [...
-            -2    -2  -2  -2 -2  2  2
-            -2    -2  -2   2  2  2  2
-            0.15  6   6   6  6  6  0.15];
-        max_speed = 1;
-        min_speed = 0.1;
-        xApproach = [2 0.5];
-        vApproach = 0.1;
+        waypoints = [ ...
+            -2    -2  -2  2  2   2
+            -2    -2  -2  -2  -2   -2
+            0.14   6   6   6   6   0.14];
+        spline_data = waypoints';
+        timespot_spl = [0 12 18 24 32 44]';
+        spline_yaw = [0 0 0 0 0 0];
 
     case 3
         % Note: This trajectory defines the waypoints, spline data, and yaw

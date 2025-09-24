@@ -25,6 +25,8 @@ temp_colororder = get(gca,'defaultAxesColorOrder');
 simlog_t       = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.i.series.time;
 simlog_battSOC = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Motor.Battery.SOC.Data;
 
+simlog_battv   = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.i.series.values('V');
+
 simlog_batti   = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.i.series.values('A');
 simlog_mot1i   = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Motor.Mot1.i.Data;
 simlog_mot2i   = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Motor.Mot2.i.Data;
@@ -38,6 +40,7 @@ grid on
 title('Battery State of Charge')
 legend('Location','Best');
 ylabel('Charge (A*hr)')
+
 
 simlog_handles(2) = subplot(2, 1, 2);
 plot(simlog_t, -simlog_batti, 'LineWidth', 1,'DisplayName','Battery');
