@@ -86,6 +86,7 @@ sim('quadcopter_package_delivery');
 
 p5_time = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.charge.series.time;
 p5_chrg = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.charge.series.values;
+p5_volt = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.v.series.values;
 
 %%
 [waypoints, timespot_spl, spline_data, spline_yaw, wayp_path_vis] = quadcopter_package_select_trajectory(6,true);
@@ -94,6 +95,7 @@ sim('quadcopter_package_delivery');
 
 p6_time = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.charge.series.time;
 p6_chrg = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.charge.series.values;
+p6_volt = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.v.series.values;
 
 %%
 figure

@@ -24,6 +24,7 @@ temp_colororder = get(gca,'defaultAxesColorOrder');
 % Get simulation results
 simlog_t       = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.i.series.time;
 simlog_battSOC = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Motor.Battery.SOC.Data;
+simlog_vBatt   = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Motor.Battery.Voltage.Data;
 
 
 simlog_batti   = simlog_quadcopter_package_delivery.Quadcopter.Electrical.Battery.i.series.values('A');
@@ -33,15 +34,14 @@ simlog_mot3i   = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Mo
 simlog_mot4i   = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Motor.Mot4.i.Data;
 
 % Plot results
-simlog_handles(1) = subplot(2, 1, 1);
+simlog_handles(1) = subplot(3, 1, 1);
 plot(simlog_t, simlog_battSOC, 'LineWidth', 1,'DisplayName','Ref')
 grid on
 title('Battery State of Charge')
 legend('Location','Best');
 ylabel('Charge (A*hr)')
 
-
-simlog_handles(2) = subplot(2, 1, 2);
+simlog_handles(2) = subplot(3, 1, 2);
 plot(simlog_t, -simlog_batti, 'LineWidth', 1,'DisplayName','Battery');
 hold on
 plot(simlog_t, simlog_mot1i, 'LineWidth', 1,'DisplayName','Motor 1');
@@ -53,8 +53,15 @@ grid on
 title('Currents')
 grid on
 legend('Location','Best')
-xlabel('Time (s)')
 ylabel('Current (A)')
+
+simlog_handles(3) = subplot(3,1,3);
+plot(simlog_t, simlog_vBatt, 'LineWidth', 1, 'DisplayName', 'Ref')
+grid on
+title('Battery Voltage Levels')
+legend('Location', 'Best');
+xlabel('Time (s)')
+ylabel('Voltage (V)')
 
 % Remove temporary variables
 clear simlog_t simlog_handles

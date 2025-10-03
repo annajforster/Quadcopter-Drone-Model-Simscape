@@ -10,7 +10,7 @@ planedepth = 0.2;        % m, distance from plane to the reference frame
 battery_capacity = 7.6*3;
 
 %% Material Property
-% Assuming the arm of the drone is manufractured by 3D Printing, the ideal
+% Assuming the arm of the drone is manufactured by 3D Printing, the ideal
 % material is PLA, safe, light and cheap, the only concern is its thermal
 % property
 rho_pla   = 1.25;            % g/cm^3 

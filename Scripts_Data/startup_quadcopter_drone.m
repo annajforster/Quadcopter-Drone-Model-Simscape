@@ -26,8 +26,5 @@ if(open_start_content)
     % Set Python environment (if needed)
     check_pyenv
     % Open Model
-    quadcopter_package_delivery % Not for Workshop
-    % Open Exercises
-    %quadcopter_workshop_prefs
-    %quadcopter_drone_exercises_app_run  % For Workshop
+    quadcopter_package_delivery
 end
