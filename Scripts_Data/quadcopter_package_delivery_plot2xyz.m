@@ -26,9 +26,9 @@ simlog_py = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Chassis
 simlog_pz = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Chassis.pz.Data;
 simlog_t  = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Chassis.px.Time;
 
-load_final_x = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Load.px.Data(end);
-load_final_y = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Load.py.Data(end);
-load_final_z = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Load.pz.Data(end);
+% load_final_x = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Load.px.Data(end);
+% load_final_y = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Load.py.Data(end);
+% load_final_z = logsout_quadcopter_package_delivery.get('Quadcopter').Values.Load.pz.Data(end);
 
 ref_pxyz = logsout_quadcopter_package_delivery.get('Ref').Values.pos.Data(:,:)';
 
@@ -49,10 +49,10 @@ plot3(simlog_px(end), simlog_py(end), simlog_pz(end), 'o','MarkerFaceColor','r')
 surf(planeMeshx, planeMeshy, zeros(size(planeMeshx)),'FaceColor',[0.8 0.9 0.8])
 
 plot3(0.5*0.25*sin(linspace(0,2*pi,30))+waypoints(1,end),0.5*0.25*cos(linspace(0,2*pi,30))+waypoints(2,end),zeros(30,1),'b','LineWidth',2)
-plot3(load_final_x,load_final_y,load_final_z,'r+','MarkerSize',8)
+% plot3(load_final_x,load_final_y,load_final_z,'r+','MarkerSize',8)
 wayp_unique = unique(waypoints','rows');
-plot3(wayp_unique(:,1),wayp_unique(:,2),wayp_unique(:,3),'o','MarkerSize',6,'MarkerFaceColor','cyan','MarkerEdgeColor','none','DisplayName','Waypoints')
-legend({'Ref','Path','','','','','Load','Waypoints'})
+% plot3(wayp_unique(:,1),wayp_unique(:,2),wayp_unique(:,3),'o','MarkerSize',6,'MarkerFaceColor','cyan','MarkerEdgeColor','none','DisplayName','Waypoints')
+legend({'Ref','Path','','','','','Waypoints'})
 
 ah = gca;
 ah.Clipping = 'off';
